@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Placeholder Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .generator {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .generator h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .download-link {
+            display: inline-block;
+            margin: 10px 0;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .download-link:hover {
+            text-decoration: underline;
+        }
+        .info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio Image Placeholder Generator</h1>
+        
+        <div class="info">
+            <strong>Instructions:</strong> This tool creates placeholder images for your portfolio. 
+            Click "Generate" for each image type, then right-click the image and "Save As" with the correct filename.
+        </div>
+
+        <div class="generator">
+            <h3>Profile Picture (300x300)</h3>
+            <canvas id="profileCanvas" width="300" height="300"></canvas>
+            <br>
+            <button onclick="generateProfile()">Generate Profile Picture</button>
+            <a id="profileDownload" class="download-link" style="display:none;" download="profile-picture.jpg">Download profile-picture.jpg</a>
+        </div>
+
+        <div class="generator">
+            <h3>Project Screenshots (400x250)</h3>
+            <canvas id="project1Canvas" width="400" height="250"></canvas>
+            <br>
+            <button onclick="generateProject(1)">Generate Project 1</button>
+            <a id="project1Download" class="download-link" style="display:none;" download="project1.jpg">Download project1.jpg</a>
+            
+            <br><br>
+            <canvas id="project2Canvas" width="400" height="250"></canvas>
+            <br>
+            <button onclick="generateProject(2)">Generate Project 2</button>
+            <a id="project2Download" class="download-link" style="display:none;" download="project2.jpg">Download project2.jpg</a>
+            
+            <br><br>
+            <canvas id="project3Canvas" width="400" height="250"></canvas>
+            <br>
+            <button onclick="generateProject(3)">Generate Project 3</button>
+            <a id="project3Download" class="download-link" style="display:none;" download="project3.jpg">Download project3.jpg</a>
+        </div>
+    </div>
+
+    <script>
+        function generateProfile() {
+            const canvas = document.getElementById('profileCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.fillStyle = '#3498db';
+            ctx.fillRect(0, 0, 300, 300);
+            
+            // Add gradient
+            const gradient = ctx.createRadialGradient(150, 150, 0, 150, 150, 150);
+            gradient.addColorStop(0, '#3498db');
+            gradient.addColorStop(1, '#2980b9');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 300, 300);
+            
+            // Add profile icon
+            ctx.fillStyle = 'white';
+            ctx.beginPath();
+            ctx.arc(150, 120, 40, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(150, 200, 80, 0, Math.PI, true);
+            ctx.fill();
+            
+            // Add text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Your Photo', 150, 270);
+            ctx.font = '14px Arial';
+            ctx.fillText('Replace with actual image', 150, 290);
+            
+            // Create download link
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const link = document.getElementById('profileDownload');
+                link.href = url;
+                link.style.display = 'inline-block';
+            }, 'image/jpeg', 0.9);
+        }
+
+        function generateProject(num) {
+            const canvas = document.getElementById(`project${num}Canvas`);
+            const ctx = canvas.getContext('2d');
+            
+            const colors = ['#e74c3c', '#f39c12', '#27ae60'];
+            const titles = ['E-commerce Platform', 'Task Management', 'Weather Dashboard'];
+            
+            // Clear canvas
+            ctx.fillStyle = colors[num - 1];
+            ctx.fillRect(0, 0, 400, 250);
+            
+            // Add gradient
+            const gradient = ctx.createLinearGradient(0, 0, 400, 250);
+            gradient.addColorStop(0, colors[num - 1]);
+            gradient.addColorStop(1, `${colors[num - 1]}88`);
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 250);
+            
+            // Add mockup elements
+            ctx.fillStyle = 'rgba(255,255,255,0.2)';
+            ctx.fillRect(30, 30, 340, 20);
+            ctx.fillRect(30, 60, 250, 15);
+            ctx.fillRect(30, 85, 200, 15);
+            ctx.fillRect(30, 110, 300, 15);
+            
+            // Add project title
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 28px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(titles[num - 1], 200, 170);
+            ctx.font = '16px Arial';
+            ctx.fillText('Project Screenshot', 200, 200);
+            ctx.font = '12px Arial';
+            ctx.fillText('Replace with actual project image', 200, 220);
+            
+            // Create download link
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const link = document.getElementById(`project${num}Download`);
+                link.href = url;
+                link.style.display = 'inline-block';
+            }, 'image/jpeg', 0.9);
+        }
+    </script>
+</body>
+</html>
