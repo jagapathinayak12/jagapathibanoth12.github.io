@@ -3,12 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jagapathi Nayak Banoth - MBA Graduate & Software Developer. Personal portfolio showcasing projects, experience, and skills.">
+    <meta name="keywords" content="Jagapathi Nayak Banoth, MBA, Software Developer, React Native, Portfolio, Manchester UK">
+    <meta name="author" content="Jagapathi Nayak Banoth">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jagapathinayakbanoth.info">
+    <meta property="og:title" content="Jagapathi Nayak Banoth - Personal Portfolio">
+    <meta property="og:description" content="MBA Graduate & Software Developer showcasing innovative digital solutions and professional experience.">
+    <meta property="og:image" content="https://www.jagapathinayakbanoth.info/profile-picture.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jagapathinayakbanoth.info">
+    <meta property="twitter:title" content="Jagapathi Nayak Banoth - Personal Portfolio">
+    <meta property="twitter:description" content="MBA Graduate & Software Developer showcasing innovative digital solutions and professional experience.">
+    <meta property="twitter:image" content="https://www.jagapathinayakbanoth.info/profile-picture.jpg">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
     <title>Jagapathi Nayak Banoth - Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS for contact form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="profile-picture.jpg" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
-<body class="loading">
+<body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -92,6 +128,13 @@
                         <span class="skill-item">GitHub Copilot (Expert)</span>
                         <span class="skill-item">VS Code Environment</span>
                         <span class="skill-item">AI-Assisted Development</span>
+                        <span class="skill-item">React Native</span>
+                        <span class="skill-item">React.js</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Mobile App Development</span>
+                        <span class="skill-item">Web Development</span>
+                        <span class="skill-item">Expo Framework</span>
+                        <span class="skill-item">MongoDB</span>
                         <span class="skill-item">ChatGPT & AI Tools</span>
                         <span class="skill-item">Problem-Solving with AI</span>
                         <span class="skill-item">Project Implementation</span>
@@ -166,40 +209,40 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="project1.jpg" alt="Agricultural Trading Calculator">
+                        <img src="calculator-app-logo.png" alt="Agricultural Trading Calculator Mobile App Logo">
                     </div>
                     <div class="project-content">
-                        <h3><i class="fas fa-calculator impact-icon"></i>Agricultural Trading Calculator</h3>
-                        <p>A specialized calculator application designed for my family's agricultural trading business. This tool helps my parents efficiently calculate crop prices, loan interest rates, and financial transactions with private lenders using fixed interest rates. Features include currency formatting, percentage calculations, and transaction history for better business management.</p>
+                        <h3><i class="fas fa-mobile-alt impact-icon"></i>Agricultural Trading Calculator Mobile App</h3>
+                        <p>A specialized calculator mobile application designed for my family's agricultural trading business. This React Native app helps my parents efficiently calculate crop prices, loan interest rates, and financial transactions with private lenders using fixed interest rates. Features include currency formatting, percentage calculations, transaction history, and cross-platform compatibility for better business management.</p>
                         <div class="project-impact family">
                             <i class="fas fa-heart"></i> Helping Family Business
                         </div>
+                        <div class="project-impact mobile-app">
+                            <i class="fas fa-mobile-alt"></i> Mobile App
+                        </div>
                         <div class="project-tech">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
+                            <span>React Native</span>
+                            <span>Expo</span>
                             <span>JavaScript</span>
-                            <span>Local Storage</span>
+                            <span>Mobile Development</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="calculator-app.apk" class="project-link" download="Calculator-App.apk"><i class="fas fa-download"></i> Download APK</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="project2.jpg" alt="Government Job Preparation Platform">
+                        <img src="aspirants-way-logo.png" alt="Aspirant's Way - Government Job Preparation Platform Logo">
                         <div class="project-status">
                             <span class="status-badge">90% Complete</span>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><i class="fas fa-graduation-cap impact-icon"></i>Government Job Preparation Platform</h3>
-                        <p>A comprehensive exam preparation app for Indian government job aspirants (90% completed). This free platform provides study materials, mock tests, and practice questions for various competitive exams like SSC, UPSC, Banking, Railway, and State PSC. Features include progress tracking, performance analytics, subject-wise preparation, and completely free access to help students achieve their government job dreams.</p>
-                        <div class="project-impact education">
-                            <i class="fas fa-gift"></i> Completely Free for Students
-                        </div>
+                        <h3><i class="fas fa-graduation-cap impact-icon"></i>Aspirant's Way - Government Job Preparation Platform</h3>
+                        <p>"Aspirant's Way" - A comprehensive exam preparation platform for Indian government job aspirants (90% completed). Provides study materials, mock tests, and practice questions for competitive exams like SSC, UPSC, Banking, Railway, and State PSC.</p>
                         <div class="project-tech">
                             <span>React</span>
                             <span>Node.js</span>
@@ -215,7 +258,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="project3.jpg" alt="Future Project">
+                        <img src="coming-soon-project.svg" alt="Coming Soon Project">
                     </div>
                     <div class="project-content">
                         <h3>Upcoming Project</h3>
@@ -393,10 +436,10 @@
                     </div>
                     
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:jagapathibanoth6@gmail.com" class="social-link" title="Email" aria-label="Send email to Jagapathi"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+447867035864" class="social-link" title="Phone" aria-label="Call Jagapathi"><i class="fas fa-phone"></i></a>
+                        <a href="#" class="social-link" title="LinkedIn Profile" aria-label="Visit LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link" title="GitHub Profile" aria-label="Visit GitHub profile"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 
