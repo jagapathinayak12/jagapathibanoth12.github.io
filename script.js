@@ -130,7 +130,7 @@ async function handleContactForm(e) {
         } catch (fallbackError) {
             console.error('Fallback error:', fallbackError);
             showFormFeedback('error', 
-                'Unable to send message automatically. Please email me directly at: jagapathibanoth6@gmail.com'
+                'Unable to send message automatically. Please email me directly at: contact@jagapathinayakbanoth.info'
             );
         }
     } finally {
