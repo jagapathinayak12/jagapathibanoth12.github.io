@@ -468,6 +468,221 @@ section {
         0 4px 8px rgba(52, 152, 219, 0.2);
 }
 
+/* Achievements Section */
+.achievements {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.achievement-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(52, 152, 219, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #27ae60, #2ecc71, #58d68d);
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-radius: 16px 16px 0 0;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+.achievement-card:hover::before {
+    opacity: 1;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 20px 60px rgba(39, 174, 96, 0.15),
+        0 8px 24px rgba(39, 174, 96, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    border-color: rgba(39, 174, 96, 0.2);
+}
+
+.achievement-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    box-shadow: 
+        0 8px 20px rgba(39, 174, 96, 0.25),
+        0 4px 8px rgba(39, 174, 96, 0.15);
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover .achievement-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 
+        0 12px 30px rgba(39, 174, 96, 0.35),
+        0 6px 12px rgba(39, 174, 96, 0.2);
+}
+
+.achievement-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.achievement-content p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* Behavioral Competencies Section */
+.behavioral {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f2f6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.behavioral::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(155, 89, 182, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.behavioral-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.behavioral-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(155, 89, 182, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.behavioral-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #9b59b6, #8e44ad, #bb8fce);
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-radius: 16px 16px 0 0;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+.behavioral-card:hover::before {
+    opacity: 1;
+}
+
+.behavioral-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 20px 60px rgba(155, 89, 182, 0.15),
+        0 8px 24px rgba(155, 89, 182, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    border-color: rgba(155, 89, 182, 0.2);
+}
+
+.behavioral-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    box-shadow: 
+        0 8px 20px rgba(155, 89, 182, 0.25),
+        0 4px 8px rgba(155, 89, 182, 0.15);
+    transition: all 0.3s ease;
+}
+
+.behavioral-card:hover .behavioral-icon {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 
+        0 12px 30px rgba(155, 89, 182, 0.35),
+        0 6px 12px rgba(155, 89, 182, 0.2);
+}
+
+.behavioral-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.behavioral-content p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
 /* Projects Section */
 .projects {
     background: #f8f9fa;
