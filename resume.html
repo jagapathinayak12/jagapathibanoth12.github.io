@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional resume of Jagapathi Nayak Banoth - MBA Graduate & Operations Manager">
+    <meta name="author" content="Jagapathi Nayak Banoth">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <title>Jagapathi Nayak Banoth - Professional Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+        }
+        
+        .resume-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            min-height: 297mm;
+            padding: 6mm 8mm 18mm 8mm;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        /* Header Section */
+        .header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 12px;
+        }
+        
+        .profile-section {
+            flex: 1;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 18px;
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .tagline {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+            font-size: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .contact-item i {
+            width: 12px;
+            color: #3498db;
+        }
+        
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            color: #3498db;
+        }
+         .profile-image-section {
+            margin-left: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .profile-container {
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .qr-container {
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50% !important;
+            object-fit: cover;
+            object-position: center 35%;
+            border: none !important;
+            margin-bottom: 8px;
+            opacity: 1;
+            transition: none;
+            display: block;
+            background: transparent !important;
+            box-shadow: none !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+            clip-path: circle(50%) !important;
+            -webkit-clip-path: circle(50%) !important;
+        }
+        
+        .profile-label {
+            font-size: 9px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .qr-code {
+            width: 80px;
+            height: 80px;
+            border: none !important;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 !important;
+            margin-bottom: 6px;
+            background: transparent !important;
+            color: #222;
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: none !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+            box-shadow: none !important;
+        }
+        
+        .qr-code:hover, .qr-code:active, .qr-code:focus, .qr-code:visited {
+            background: transparent !important;
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+        }
+        
+        .qr-fallback, .qr-icon, .qr-scan-text, .qr-portfolio-text {
+            background: transparent !important;
+            color: #222 !important;
+            border: none !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+        }
+        
+        .website-text {
+            font-size: 9px;
+            color: #3498db;
+            margin-top: 6px;
+            font-weight: 600;
+            word-break: break-all;
+        }
+        
+        /* Professional Summary Section */
+        .professional-summary {
+            margin-bottom: 12px;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .professional-summary .tagline {
+            font-size: 11px;
+            color: #555;
+            line-height: 1.4;
+            text-align: justify;
+            font-weight: 400;
+        }
+        
+        /* Main Content */
+        .content {
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            gap: 15px;
+        }
+        
+        .main-column {
+            padding-right: 8px;
+        }
+        
+        .sidebar {
+            border-left: 1px solid #eee;
+            padding-left: 12px;
+        }
+        
+        .section {
+            margin-bottom: 12px;
+        }
+        
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 6px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid #3498db;
+        }
+        
+        /* Experience */
+        .experience-item {
+            margin-bottom: 10px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 11px;
+        }
+        
+        .date {
+            font-size: 9px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .company {
+            color: #3498db;
+            font-weight: 500;
+            font-size: 10px;
+            margin-bottom: 3px;
+        }
+        
+        .description {
+            font-size: 9px;
+            margin-bottom: 4px;
+            text-align: justify;
+            line-height: 1.3;
+        }
+        
+        .highlights {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .highlights li {
+            font-size: 8px;
+            margin-bottom: 1px;
+            padding-left: 10px;
+            position: relative;
+            line-height: 1.3;
+        }
+        
+        .highlights li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        /* Education */
+        .education-item {
+            margin-bottom: 8px;
+            page-break-inside: avoid;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 10px;
+            margin-bottom: 1px;
+        }
+        
+        .institution {
+            color: #3498db;
+            font-size: 9px;
+            margin-bottom: 1px;
+        }
+        
+        .education-item .description {
+            font-size: 8px;
+            margin-bottom: 0;
+            text-align: justify;
+            line-height: 1.3;
+        }
+        
+        /* Skills */
+        .skills-category {
+            margin-bottom: 6px;
+        }
+        
+        .skills-category h4 {
+            font-size: 10px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .skills-list {
+            font-size: 8px;
+            line-height: 1.2;
+            color: #555;
+        }
+        
+        /* Projects */
+        .project-item {
+            margin-bottom: 8px;
+            page-break-inside: avoid;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
+        
+        .project-description {
+            font-size: 8px;
+            margin-bottom: 3px;
+            text-align: justify;
+            line-height: 1.3;
+        }
+        
+        .project-tech {
+            font-size: 7px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .impact-badge {
+            display: inline-block;
+            background: #fff !important;
+            color: #27ae60;
+            border: none !important;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 8px;
+            font-weight: 500;
+            margin-top: 3px;
+        }
+        
+        /* Achievements */
+        .achievement-item {
+            font-size: 9px;
+            margin-bottom: 3px;
+            padding-left: 10px;
+            position: relative;
+            line-height: 1.3;
+        }
+        
+        .achievement-item::before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        /* Print Styles */
+        @media print {
+            .resume-container {
+                margin: 0;
+                padding: 6mm;
+                box-shadow: none;
+                max-width: none;
+                width: 100%;
+                min-height: auto;
+            }
+            
+            body {
+                background: white;
+                font-size: 10px;
+            }
+            
+            .header {
+                page-break-after: avoid;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
+            
+            .professional-summary {
+                page-break-after: avoid;
+                margin-bottom: 10px;
+                padding: 6px 0;
+            }
+            
+            .content {
+                page-break-before: avoid;
+                gap: 12px;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 10px;
+            }
+            
+            .section-title {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+            
+            .experience-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 8px;
+            }
+            
+            .education-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 6px;
+            }
+            
+            .project-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 6px;
+            }
+            
+            .skills-category {
+                margin-bottom: 4px;
+            }
+            
+            .achievement-item {
+                margin-bottom: 2px;
+            }
+            
+            /* Ensure first section starts properly */
+            .main-column .section:first-child {
+                page-break-before: avoid;
+            }
+            
+            /* Footer positioning for print */
+            .footer {
+                position: fixed;
+                bottom: 1mm;
+                left: 6mm;
+                right: 6mm;
+                font-size: 8px;
+            }
+            
+            /* Add bottom padding to content to avoid footer overlap */
+            .resume-container {
+                padding-bottom: 15mm;
+            }
+        }
+        
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 1mm;
+            left: 8mm;
+            right: 8mm;
+            text-align: center;
+            font-size: 9px;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 6px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .profile-image {
+                width: 90px;
+                height: 90px;
+                border-radius: 50% !important;
+                box-shadow: none !important;
+                border: none !important;
+                background: transparent !important;
+                outline: none !important;
+                -webkit-tap-highlight-color: transparent !important;
+                -webkit-touch-callout: none !important;
+                -webkit-user-select: none !important;
+                user-select: none !important;
+                clip-path: circle(50%) !important;
+                -webkit-clip-path: circle(50%) !important;
+            }
+            
+            .qr-code {
+                border: none !important;
+                background: transparent !important;
+                outline: none !important;
+                box-shadow: none !important;
+                -webkit-tap-highlight-color: transparent !important;
+                -webkit-touch-callout: none !important;
+                -webkit-user-select: none !important;
+                user-select: none !important;
+            }
+        }
+
+        /* Remove all box-shadows and borders for PDF merging effect */
+        .resume-container, .profile-image, .qr-code, .profile-container, .qr-container {
+            box-shadow: none !important;
+            border: none !important;
+            background: transparent !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+        }
+        
+        /* Keep the header border visible */
+        .header {
+            border-bottom: 3px solid #2c3e50 !important;
+            box-shadow: none !important;
+            background: transparent !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+        }
+        .profile-image, .qr-code {
+            box-shadow: none !important;
+            border: none !important;
+            background: transparent !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+        }
+        .profile-image {
+            border-radius: 50% !important;
+            clip-path: circle(50%) !important;
+            -webkit-clip-path: circle(50%) !important;
+        }
+        /* Keep the profile image section border visible */
+        /* Removed individual profile section border - using main header border instead */
+        .impact-badge {
+            background: #fff !important;
+            color: #27ae60;
+            border: none !important;
+        }
+        @media (max-width: 600px) {
+            .profile-image, .qr-code {
+                box-shadow: none !important;
+                border: none !important;
+                background: transparent !important;
+                outline: none !important;
+                -webkit-tap-highlight-color: transparent !important;
+                -webkit-touch-callout: none !important;
+                -webkit-user-select: none !important;
+                user-select: none !important;
+            }
+            .profile-image {
+                border-radius: 50% !important;
+                clip-path: circle(50%) !important;
+                -webkit-clip-path: circle(50%) !important;
+            }
+        }
+        @media print {
+            .resume-container, .profile-image, .qr-code, .profile_container, .qr-container {
+                box-shadow: none !important;
+                border: none !important;
+                background: transparent !important;
+                outline: none !important;
+                -webkit-tap-highlight-color: transparent !important;
+            }
+            .profile-image {
+                border-radius: 50% !important;
+                clip-path: circle(50%) !important;
+                -webkit-clip-path: circle(50%) !important;
+            }
+            /* Keep header border visible in print */
+            .header {
+                border-bottom: 3px solid #2c3e50 !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="profile-section">
+                <div class="title">MBA Graduate & Operations Manager</div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:contact@jagapathinayakbanoth.info">contact@jagapathinayakbanoth.info</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+447867035864">+44 7867 035864</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>23 Gwynant Place, Manchester, M20 4AE, UK</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <a href="https://www.jagapathinayakbanoth.info" target="_blank" rel="noopener noreferrer">www.jagapathinayakbanoth.info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Summary - Under the line -->
+        <div class="professional-summary">
+            <div class="tagline">MBA graduate with strong experience in operations, logistics, and business management. Proven success in managing high-volume environments at Amazon and in hospitality, with expertise in team leadership, compliance, and cost optimization. Seeking managerial roles in airport or aviation operations where I can apply international experience and business acumen to improve efficiency and customer satisfaction.</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="main-column">
+                <!-- Professional Experience -->
+                <div class="section">
+                    <h2 class="section-title">Professional Experience</h2>
+                    
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div class="job-title">Warehouse Associate</div>
+                            <div class="date">July 2025 – Present</div>
+                        </div>
+                        <div class="company">Amazon MAN1, Manchester, UK (Transferred from DXM2)</div>
+                        <div class="description">Recently transferred to Amazon MAN1 fulfillment center (July 20, 2025) at my own request, demonstrating adaptability and commitment to large-scale operations across multiple facilities. Experienced in managing complex automated systems, ensuring smooth flow of goods and compliance with safety regulations in high-volume environments. Proficient in cross-departmental coordination and performance optimization across diverse operational units.</div>
+                        <ul class="highlights">
+                            <li>Successfully managed operational transitions between facilities, adapting to new layouts, processes, and regulatory requirements</li>
+                            <li>Consistently exceeded daily productivity targets in high-volume logistics environments through effective resource management</li>
+                            <li>Cross-trained in multiple operational departments: inventory management, order processing, quality control, and logistics coordination</li>
+                            <li>Led diverse, multinational teams across different facilities, ensuring effective communication and collaborative workflows</li>
+                            <li>Maintained exemplary safety and compliance record with zero incidents throughout tenure at multiple locations</li>
+                            <li>Utilized advanced tracking and monitoring systems to analyze performance metrics and implement workflow improvements</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div class="job-title">General Manager Intern</div>
+                            <div class="date">January 2024 – September 2024</div>
+                        </div>
+                        <div class="company">Double Zero Pizzeria, Manchester, UK</div>
+                        <div class="description">Led comprehensive restaurant operations during MBA program, developing leadership skills managing a diverse team, coordinating logistics and supplier relationships, and ensuring full compliance with UK business and safety regulations. Responsible for end-to-end operational management including staff coordination, inventory control, financial oversight, and customer service excellence.</div>
+                        <ul class="highlights">
+                            <li>Managed and developed team of 8-12 staff members with strategic scheduling, performance optimization, and training programs</li>
+                            <li>Implemented comprehensive cost control measures and operational efficiencies resulting in 15% reduction in expenses</li>
+                            <li>Achieved and maintained 4.5+ star customer satisfaction rating through service excellence and quality management</li>
+                            <li>Coordinated supplier relationships, inventory management, and logistics to ensure smooth operations</li>
+                            <li>Ensured 100% compliance with UK food safety standards, health regulations, and business requirements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="section">
+                    <h2 class="section-title">Education</h2>
+                    
+                    <div class="education-item">
+                        <div class="degree">Master of Business Administration (MBA) with Professional Placement</div>
+                        <div class="institution">University of Central Lancashire (UCLan), Preston, UK</div>
+                        <div class="education-details">September 2022 - September 2024 | Grade: 70% | 2-Year Full-time Program</div>
+                        <div class="description">Comprehensive program combining 3 taught semesters with 6-month professional placement. Core modules: Strategic Management, Marketing Management, Operations & Project Management, Entrepreneurship & Innovation.</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="degree">Bachelor of Commerce (B.Com General)</div>
+                        <div class="institution">City College Hyderabad, Osmania University</div>
+                        <div class="education-details">June 2018 - May 2022 | Grade: 70%</div>
+                        <div class="description">Comprehensive foundation in Financial Accounting, Corporate Accounting, Business Law, Computerized Accounting (Tally), and E-Commerce fundamentals.</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="degree">Intermediate Education (BiPC Stream)</div>
+                        <div class="institution">Telangana State Model School, Parvathagiri</div>
+                        <div class="education-details">2-Year Course (10+2) | Grade: 85%</div>
+                        <div class="description">Biology, Physics, Chemistry stream with strong analytical thinking and systematic problem-solving development.</div>
+                    </div>
+                </div>
+
+                <!-- Business & Operations Projects -->
+                <div class="section">
+                    <h2 class="section-title">Business & Operations Projects</h2>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Multi-Site Operations Management - Amazon Transfer Project</div>
+                        <div class="project-description">Successfully managed personal transfer from Amazon DXM2 to MAN1 facility, demonstrating adaptability to different operational environments, compliance requirements, and team structures. Maintained productivity standards while learning new systems, processes, and safety protocols across multiple locations.</div>
+                        <div class="project-tech">Skills Applied: Change Management, Process Adaptation, Multi-Site Operations</div>
+                        <div class="impact-badge">Operational Excellence</div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Cost Optimization & Compliance Management - Restaurant Operations</div>
+                        <div class="project-description">Led comprehensive operational improvements at Double Zero Pizzeria, implementing cost control strategies, staff development programs, and compliance systems. Achieved measurable improvements in financial performance while maintaining high customer satisfaction and regulatory compliance.</div>
+                        <div class="project-tech">Areas: Financial Management, Team Leadership, Regulatory Compliance</div>
+                        <div class="impact-badge">15% Cost Reduction</div>
+                    </div>
+                </div>
+
+                <!-- Technology Projects (Academic & Personal) -->
+                <div class="section">
+                    <h2 class="section-title">Technology Projects (Academic & Personal)</h2>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Agricultural Trading Calculator Mobile App</div>
+                        <div class="project-description">Business application developed to support family agricultural trading operations, featuring financial calculations, transaction tracking, and data management capabilities.</div>
+                        <div class="project-tech">Technologies: React Native, Expo, JavaScript, Mobile Development</div>
+                        <div class="impact-badge">Family Business Support</div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Aspirant's Way - Educational Platform (90% Complete)</div>
+                        <div class="project-description">Comprehensive exam preparation platform for government job aspirants, demonstrating project management and educational technology development skills.</div>
+                        <div class="project-tech">Technologies: React, Node.js, MongoDB, Express.js</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <!-- Core Competencies -->
+                <div class="section">
+                    <h2 class="section-title">Core Competencies</h2>
+                    
+                    <div class="skills-category">
+                        <h4>Operations & Logistics Management</h4>
+                        <div class="skills-list">Multi-site Operations, Supply Chain Coordination, Workflow Optimization, Performance Management, Resource Planning, Process Improvement</div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Team Leadership & Staff Development</h4>
+                        <div class="skills-list">Team Management, Staff Training, Performance Coaching, Cross-Cultural Leadership, Scheduling & Resource Allocation, Change Management</div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Regulatory Compliance & Safety</h4>
+                        <div class="skills-list">UK Safety Standards, Health Regulations, Compliance Monitoring, Risk Management, Quality Assurance, Safety Protocol Implementation</div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Business Analysis & Cost Control</h4>
+                        <div class="skills-list">Financial Management, Cost Optimization, Performance Metrics, Strategic Planning, Business Process Analysis, Operational Efficiency</div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Customer Service & Stakeholder Management</h4>
+                        <div class="skills-list">Customer Satisfaction, Service Excellence, Stakeholder Relations, Communication, Problem Resolution, Relationship Building</div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Languages & Communication</h4>
+                        <div class="skills-list">English (Fluent), Telugu (Native), Hindi (Fluent), Cross-Cultural Communication, Professional Writing, Presentation Skills</div>
+                    </div>
+                </div>
+
+                <!-- Additional Skills -->
+                <div class="section">
+                    <h2 class="section-title">Additional Skills</h2>
+                    
+                    <div class="skills-category">
+                        <h4>Technology & Systems</h4>
+                        <div class="skills-list">Microsoft Office Suite, Database Management, Automated Systems Operation, Digital Communication Tools, Project Management Software</div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Specialized Knowledge</h4>
+                        <div class="skills-list">Accounting (Tally), International Business, Educational Technology, Multi-site Operations, Business Development</div>
+                    </div>
+                </div>
+
+                <!-- Key Achievements -->
+                <div class="section">
+                    <h2 class="section-title">Key Achievements</h2>
+                    <div class="achievement-item">15% cost reduction in operations through strategic management and process optimization</div>
+                    <div class="achievement-item">4.5+ star customer satisfaction rating through service excellence and quality management</div>
+                    <div class="achievement-item">Zero safety incidents across multiple locations demonstrating strong compliance management</div>
+                    <div class="achievement-item">Successful multi-site operations management (Amazon DXM2 to MAN1 transfer, July 2025)</div>
+                    <div class="achievement-item">MBA with 70% marks from UK university (UCLan) demonstrating academic excellence</div>
+                    <div class="achievement-item">Cross-cultural team leadership across international environments</div>
+                    <div class="achievement-item">Published professional portfolio website (www.jagapathinayakbanoth.info)</div>
+                </div>
+
+                <!-- Professional Attributes -->
+                <div class="section">
+                    <h2 class="section-title">Professional Attributes</h2>
+                    <div class="skills-list">
+                        • Strategic thinking and operational analysis<br>
+                        • Process optimization and efficiency improvement<br>
+                        • Adaptability to new environments and regulations<br>
+                        • Strong leadership and team development capabilities<br>
+                        • Excellent problem-solving and decision-making skills<br>
+                        • International perspective and cultural awareness<br>
+                        • Customer service excellence and stakeholder management<br>
+                        • Data-driven performance management and reporting
+                    </div>
+                </div>
+
+                <!-- Certifications & Training -->
+                <div class="section">
+                    <h2 class="section-title">Training & Certifications</h2>
+                    <div class="achievement-item">Amazon Warehouse Operations Training</div>
+                    <div class="achievement-item">UK Food Safety & Hygiene Compliance</div>
+                    <div class="achievement-item">UCLan Professional Placement Assessment</div>
+                    <div class="achievement-item">Computerized Accounting (Tally)</div>
+                    <div class="achievement-item">Cross-departmental Operations Training</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Jagapathi Nayak Banoth | Professional Resume | Visit: www.jagapathinayakbanoth.info | Updated August 2025
+        </div>
+    </div>
+</body>
+</html>
