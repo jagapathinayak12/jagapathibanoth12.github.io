@@ -125,7 +125,8 @@ img {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 120px; /* Increased from 80px to prevent navbar overlap */
+    padding-bottom: 40px;
 }
 
 .hero-container {
@@ -226,6 +227,8 @@ img {
 .profile-img {
     width: 300px;
     height: 300px;
+    max-width: 90vw; /* Ensure it doesn't exceed viewport width */
+    max-height: 90vw;
     border-radius: 50%;
     object-fit: cover;
     object-position: center 35%;
@@ -882,17 +885,18 @@ section:first-of-type {
     position: relative;
     margin: 40px 0;
     width: 50%;
-    margin-left: 50%;
 }
 
 .education .timeline-item:nth-child(odd) {
     margin-left: 0;
     padding-right: 40px;
+    text-align: right;
 }
 
 .education .timeline-item:nth-child(even) {
     margin-left: 50%;
     padding-left: 40px;
+    text-align: left;
 }
 
 .education .timeline-dot {
@@ -992,17 +996,18 @@ section:first-of-type {
     position: relative;
     margin: 40px 0;
     width: 50%;
-    margin-left: 50%;
 }
 
 .experience-timeline .timeline-item:nth-child(odd) {
     margin-left: 0;
     padding-right: 40px;
+    text-align: right;
 }
 
 .experience-timeline .timeline-item:nth-child(even) {
     margin-left: 50%;
     padding-left: 40px;
+    text-align: left;
 }
 
 .experience-timeline .timeline-dot {
@@ -1516,7 +1521,7 @@ section:first-of-type {
     }
     
     .hero {
-        padding: 80px 0 50px 0;
+        padding: 120px 0 50px 0; /* Increased top padding to prevent navbar overlap */
         min-height: 70vh;
     }
     
@@ -1647,6 +1652,8 @@ section:first-of-type {
         padding-right: 0;
         justify-content: flex-start;
         margin: 25px 0; /* Reduced from 40px */
+        margin-left: 0 !important; /* Override alternating layout on mobile */
+        text-align: left !important; /* Consistent text alignment on mobile */
     }
     
     .experience-timeline .timeline-dot, .education .timeline-dot {
@@ -1737,7 +1744,7 @@ section:first-of-type {
 /* Additional responsive rules for very small screens */
 @media (max-width: 480px) {
     .hero {
-        padding: 60px 0 40px 0;
+        padding: 100px 0 40px 0; /* Increased for navbar clearance */
         min-height: 60vh;
     }
     
