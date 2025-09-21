@@ -885,13 +885,13 @@ section:first-of-type {
 .education .timeline-item:nth-child(odd) {
     margin-left: 0;
     padding-right: 40px;
-    text-align: right;
+    text-align: left !important;
 }
 
 .education .timeline-item:nth-child(even) {
     margin-left: 50%;
     padding-left: 40px;
-    text-align: left;
+    text-align: left !important;
 }
 
 .education .timeline-dot {
@@ -923,6 +923,7 @@ section:first-of-type {
     position: relative;
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left !important; /* Force left alignment */
 }
 
 .education .timeline-content:hover {
@@ -961,6 +962,7 @@ section:first-of-type {
     line-height: 1.6; /* Reduced from 1.8 */
     margin-bottom: 1rem; /* Reduced from 1.5rem */
     font-size: 0.95rem; /* Reduced from 1rem */
+    text-align: left !important; /* Force left alignment */
 }
 
 /* Experience Section */
@@ -996,13 +998,13 @@ section:first-of-type {
 .experience-timeline .timeline-item:nth-child(odd) {
     margin-left: 0;
     padding-right: 40px;
-    text-align: right;
+    text-align: left !important;
 }
 
 .experience-timeline .timeline-item:nth-child(even) {
     margin-left: 50%;
     padding-left: 40px;
-    text-align: left;
+    text-align: left !important;
 }
 
 .experience-timeline .timeline-dot {
@@ -1034,6 +1036,7 @@ section:first-of-type {
     position: relative;
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left !important; /* Force left alignment */
 }
 
 .experience-timeline .timeline-content:hover {
@@ -1072,6 +1075,7 @@ section:first-of-type {
     line-height: 1.6; /* Reduced from 1.8 */
     margin-bottom: 1rem; /* Reduced from 1.5rem */
     font-size: 0.95rem; /* Reduced from 1rem */
+    text-align: left !important; /* Force left alignment */
 }
 
 .experience-skills {
@@ -1376,6 +1380,36 @@ section:first-of-type {
 .experience-highlights li strong {
     color: #3498db;
     font-weight: 700;
+}
+
+/* Force left alignment for all timeline content */
+.experience-timeline .timeline-content *,
+.education .timeline-content * {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+.experience-timeline .timeline-content h3,
+.experience-timeline .timeline-content h4,
+.experience-timeline .timeline-content p,
+.experience-timeline .timeline-content li,
+.education .timeline-content h3,
+.education .timeline-content h4,
+.education .timeline-content p,
+.education .timeline-content li {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+/* Additional override for any inherited styles */
+.experience-timeline,
+.education-timeline {
+    direction: ltr;
+}
+
+.experience-timeline .timeline-item,
+.education .timeline-item {
+    direction: ltr;
 }
 
 /* Enhanced animation support */
