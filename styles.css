@@ -1557,23 +1557,6 @@ section:first-of-type {
     margin-bottom: 0.75rem;
 }
 
-.footer-resume-note {
-    font-size: 0.85rem;
-    margin: 0 0 0.85rem 0;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-resume-note a {
-    color: #5dade2;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.footer-resume-note a:hover {
-    color: #aed6f1;
-    text-decoration: underline;
-}
-
 .footer-socials {
     font-size: 0.9rem;
     margin: 0;
@@ -2536,25 +2519,6 @@ section:first-of-type {
 .hero .hero-killer-line strong {
     color: #fff;
     font-weight: 600;
-}
-
-.hero .hero-resume-note {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.68);
-    line-height: 1.55;
-    margin: 1.15rem 0 0 0;
-    max-width: 36rem;
-}
-
-.hero .hero-resume-note a {
-    color: #f8c471;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.hero .hero-resume-note a:hover {
-    text-decoration: underline;
 }
 
 .hero .hero-summary {
