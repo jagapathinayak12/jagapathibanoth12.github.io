@@ -64,8 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }, observerOptions);
 
-        // Observe all sections and animatable elements
+        // Observe all sections and animatable elements (skip flagship: must stay visible on file:// if observer misbehaves)
         document.querySelectorAll('section, .skill-category, .project-card').forEach(element => {
+            if (element.id === 'aspirants-way' || element.classList.contains('aspirants-way-flagship')) {
+                return;
+            }
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
             element.style.transition = 'all 0.6s ease-out';

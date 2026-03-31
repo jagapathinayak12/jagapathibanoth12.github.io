@@ -1,92 +1,86 @@
 {
   "personalInfo": {
-    "name": "Jagapathi Banoth",
-    "title": "Software Developer & Tech Enthusiast",
-    "tagline": "I create amazing digital experiences with clean code and modern technologies.",
-    "email": "jagapathi.banoth@email.com",
-    "phone": "+91 12345 67890",
-    "location": "Your City, Your State, India",
-    "profileImage": "profile-picture.jpg"
+    "name": "Jagapathi Nayak Banoth",
+    "title": "MBA | Operations | Amazon MAN1 (DXM2 → MAN1) — Area Manager–path",
+    "tagline": "Manchester. Amazon MAN1 (DXM2 → MAN1) + MBA GM placement. Ownership, safety, measurable results; targeting operations leadership. Practical tools where they improve decisions.",
+    "email": "contact@jagapathinayakbanoth.info",
+    "phone": "+44 7867 035864",
+    "location": "Manchester, United Kingdom",
+    "profileImage": "profile-picture.png",
+    "website": "https://www.jagapathinayakbanoth.info"
   },
   "socialLinks": {
-    "linkedin": "https://www.linkedin.com/in/your-profile",
-    "github": "https://github.com/your-username",
-    "twitter": "https://twitter.com/your-handle",
-    "email": "mailto:jagapathi.banoth@email.com"
+    "linkedin": "https://www.linkedin.com/in/jagapathinayakbanoth",
+    "github": "https://github.com/jagapathinayak12",
+    "email": "mailto:contact@jagapathinayakbanoth.info"
   },
   "about": {
     "description": [
-      "Hello! I'm Jagapathi Banoth, a passionate software developer with a strong foundation in modern web technologies. I enjoy creating efficient, scalable, and user-friendly applications that solve real-world problems.",
-      "My journey in technology began with curiosity and has evolved into a professional career where I continuously learn and adapt to new technologies. I believe in writing clean, maintainable code and following best practices in software development."
+      "MBA (UCLan). Amazon fulfilment MAN1; MBA GM placement in hospitality, Manchester.",
+      "Page order: About → Experience → Impact (includes separate student vs institute delivery cards) → Skills → Selected projects (Agricultural + two Aspirants cards) → Aspirants Way detail → Education.",
+      "Uses data, reporting, and practical tools when they improve operations and decisions."
     ],
     "stats": {
-      "experience": "2+",
-      "projects": "10+",
-      "technologies": "5+"
+      "ukProfessionalYears": "2+",
+      "projects": "3",
+      "compliance": "100%",
+      "safetyIncidents": "Zero"
     }
   },
   "skills": {
-    "frontend": ["HTML5", "CSS3", "JavaScript", "React", "Vue.js", "TypeScript"],
-    "backend": ["Node.js", "Python", "Express.js", "MongoDB", "PostgreSQL", "REST APIs"],
-    "tools": ["Git", "Docker", "AWS", "Figma", "VS Code", "Postman"]
+    "frontend": ["HTML5", "CSS3", "JavaScript", "React", "React Native", "Expo"],
+    "backend": ["Node.js", "Express.js", "MongoDB", "REST APIs", "Socket.io"],
+    "platform": ["Firebase", "Git", "GitHub Pages", "Cloud deployment patterns", "EmailJS"]
   },
   "projects": [
     {
-      "title": "Calculator Application",
-      "description": "A fully functional calculator built with modern web technologies. Features include basic arithmetic operations, memory functions, keyboard support, and a clean, intuitive user interface with responsive design.",
-      "technologies": ["HTML5", "CSS3", "JavaScript"],
-      "image": "project1.jpg",
-      "githubLink": "#",
-      "liveLink": "#",
-      "status": "completed"
+      "title": "Agricultural Trading Calculator",
+      "description": "React Native / Expo app for family trading operations: calculations, P&L, records.",
+      "technologies": ["React Native", "Expo", "JavaScript"],
+      "status": "completed",
+      "github": "https://github.com/jagapathinayak12"
     },
     {
-      "title": "Exam Preparation App",
-      "description": "An interactive exam preparation platform I'm currently developing. Features include practice tests, progress tracking, study materials, performance analytics, and personalized study plans to help students excel in their exams.",
-      "technologies": ["React", "Node.js", "MongoDB", "Express.js"],
-      "image": "project2.jpg",
-      "githubLink": "#",
-      "liveLink": "#",
-      "status": "in-development"
+      "title": "Aspirants Way — Student platform",
+      "description": "aspirantsway.com: self-prep, practice, tests, personal progress—live.",
+      "technologies": ["React", "React Native", "Expo", "Node.js", "Express", "MongoDB", "Firebase", "Socket.io"],
+      "status": "live",
+      "portfolioSection": "#aspirants-way",
+      "liveLink": "https://www.aspirantsway.com"
     },
     {
-      "title": "Upcoming Project",
-      "description": "Currently planning my next exciting project. Stay tuned for updates on innovative solutions that combine cutting-edge technology with practical applications.",
-      "technologies": ["Coming Soon"],
-      "image": "project3.jpg",
-      "githubLink": "#",
-      "liveLink": "#",
-      "status": "planned"
+      "title": "Aspirants Way — Institute console",
+      "description": "institute.aspirantsway.com: coaching institutes run their centres on the platform—batches, students, tests, institute-level tracking (~90%).",
+      "technologies": ["React", "React Native", "Expo", "Node.js", "Express", "MongoDB", "Firebase", "Socket.io"],
+      "status": "in-progress-90",
+      "portfolioSection": "#aspirants-way",
+      "liveLink": "https://www.institute.aspirantsway.com"
     }
   ],
   "education": [
     {
-      "degree": "Master of Business Administration (MBA)",
+      "degree": "MBA with Professional Placement",
       "institution": "University of Central Lancashire, Preston, UK",
       "duration": "Sep 2022 - Sep 2024",
-      "grade": "75%",
-      "description": "Completed MBA with 75% marks. Gained comprehensive knowledge in business strategy, management, finance, and entrepreneurship. Developed strong analytical and leadership skills applicable to technology ventures and business development."
+      "grade": "70%"
     },
     {
-      "degree": "Bachelor's Degree",
+      "degree": "B.Com General",
       "institution": "City College Hyderabad, Osmania University",
-      "duration": "Graduation Year",
-      "grade": "70%",
-      "description": "Graduated with 70% marks. Built a strong academic foundation that complemented my technical skills and business acumen, preparing me for a career combining technology and business expertise."
+      "duration": "June 2018 - May 2022",
+      "grade": "70%"
     },
     {
-      "degree": "Intermediate Education (BiPC)",
-      "institution": "TSMS Parvathagiri",
-      "duration": "Completion Year",
-      "grade": "85%",
-      "description": "Completed Intermediate with 85% marks in Biology, Physics, and Chemistry (BiPC). Strong performance in science subjects laid the foundation for analytical thinking and problem-solving skills essential for software development."
+      "degree": "Intermediate (BiPC)",
+      "institution": "Telangana State Model School, Parvathagiri",
+      "duration": "2016 - 2018",
+      "grade": "85%"
     },
     {
-      "degree": "Secondary School Certificate (SSC)",
-      "institution": "TSMS Parvathagiri",
-      "duration": "Completion Year",
-      "grade": "7.5 GPA",
-      "description": "Achieved 7.5 GPA in SSC examinations. Demonstrated consistent academic excellence and developed strong fundamentals in mathematics and sciences that support my current technical career."
+      "degree": "SSC",
+      "institution": "Telangana State Model School, Parvathagiri",
+      "duration": "Completed 2016",
+      "grade": "7.5 GPA"
     }
   ]
 }
