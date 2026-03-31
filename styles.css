@@ -1927,3 +1927,238 @@ section:first-of-type {
 .project-card:hover .project-image img {
     transform: scale(1.05);
 }
+
+/* Aspirants Way flagship section */
+.aspirants-way-flagship {
+    background: linear-gradient(180deg, #ffffff 0%, #f0f7fc 50%, #ffffff 100%);
+    padding: 4rem 0 5rem;
+    border-top: 1px solid rgba(52, 152, 219, 0.15);
+    border-bottom: 1px solid rgba(52, 152, 219, 0.12);
+}
+
+.aspirants-way-flagship .section-title {
+    margin-bottom: 1rem;
+}
+
+.flagship-lead {
+    font-size: 1.08rem;
+    line-height: 1.75;
+    color: #2c3e50;
+    font-weight: 500;
+    max-width: 920px;
+    margin: 0 auto 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(52, 152, 219, 0.08);
+    border-radius: 12px;
+    border-left: 4px solid #3498db;
+}
+
+.project-power-line {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.65;
+    margin-bottom: 1rem !important;
+    padding: 0.85rem 1rem;
+    background: linear-gradient(90deg, rgba(52, 152, 219, 0.12), transparent);
+    border-radius: 8px;
+}
+
+.project-card-flagship {
+    border: 1px solid rgba(52, 152, 219, 0.25);
+    box-shadow: 0 8px 30px rgba(52, 152, 219, 0.12);
+}
+
+.eco-block {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.eco-block h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.eco-block h3 i {
+    color: #3498db;
+}
+
+.eco-block > p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.eco-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #444;
+    line-height: 1.65;
+    font-size: 0.92rem;
+}
+
+.eco-list li {
+    margin-bottom: 0.65rem;
+}
+
+.eco-list li strong {
+    color: #2c3e50;
+}
+
+.eco-two-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.eco-two-col .eco-block {
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.arch-components {
+    list-style: none;
+    padding-left: 0;
+}
+
+.arch-components li {
+    padding-left: 1rem;
+    border-left: 3px solid #3498db;
+    margin-bottom: 0.75rem;
+}
+
+.arch-diagram {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.68rem;
+    line-height: 1.35;
+    background: #1e2a38;
+    color: #e8f4fc;
+    padding: 1.25rem 1rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-top: 1.25rem;
+    white-space: pre;
+}
+
+.workflow-steps {
+    margin: 0;
+    padding-left: 1.35rem;
+    color: #444;
+    line-height: 1.75;
+    font-size: 0.95rem;
+}
+
+.workflow-steps li {
+    margin-bottom: 0.6rem;
+    padding-left: 0.35rem;
+}
+
+.scenario-block {
+    background: linear-gradient(135deg, #fdfefe 0%, #eef6fb 100%);
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.scenario-block p {
+    margin-bottom: 0;
+    font-size: 0.98rem;
+}
+
+.my-role-block {
+    background: #2c3e50;
+    color: #ecf0f1;
+    border: none;
+}
+
+.my-role-block h3 {
+    color: #fff;
+}
+
+.my-role-block h3 i {
+    color: #5dade2;
+}
+
+.my-role-list {
+    color: #dfe6e9;
+}
+
+.my-role-list li strong {
+    color: #fff;
+}
+
+.eco-note {
+    font-size: 0.88rem;
+    color: #666;
+    margin-top: 1rem;
+    margin-bottom: 0 !important;
+}
+
+.screenshot-hint {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 1.25rem !important;
+}
+
+.screenshot-hint code {
+    font-size: 0.85em;
+    background: #ecf0f1;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.screenshot-placeholder {
+    min-height: 160px;
+    border: 2px dashed rgba(52, 152, 219, 0.35);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    color: #2c3e50;
+}
+
+.screenshot-placeholder span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.screenshot-placeholder small {
+    font-size: 0.75rem;
+    color: #7f8c8d;
+    word-break: break-all;
+}
+
+.biz-row .biz-block {
+    background: #f8fafb;
+}
+
+@media (max-width: 768px) {
+    .arch-diagram {
+        font-size: 0.58rem;
+        padding: 1rem 0.65rem;
+    }
+
+    .flagship-lead {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}

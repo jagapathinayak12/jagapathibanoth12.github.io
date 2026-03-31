@@ -27,7 +27,7 @@
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     
     <title>Jagapathi Nayak Banoth - Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="styles.css?v=1.2">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer")
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -55,6 +55,7 @@
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#achievements" class="nav-link">Achievements</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#aspirants-way" class="nav-link">Aspirants Way</a>
                 <a href="#education" class="nav-link">Education</a>
                 <a href="resume.html" class="nav-link" target="_blank">Resume</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -414,25 +415,29 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card project-card-flagship">
                     <div class="project-image">
                         <img src="aspirants-way-logo.png" alt="Aspirant's Way - Government Job Preparation Platform Logo">
                         <div class="project-status">
-                            <span class="status-badge">90% Complete</span>
+                            <span class="status-badge">In active development</span>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><i class="fas fa-graduation-cap impact-icon"></i>Aspirant's Way - Government Job Preparation Platform</h3>
-                        <p>"Aspirant's Way" - A comprehensive exam preparation platform for Indian government job aspirants (90% completed). Provides study materials, mock tests, and practice questions for competitive exams like SSC, UPSC, Banking, Railway, and State PSC.</p>
+                        <h3><i class="fas fa-graduation-cap impact-icon"></i>Aspirants Way — EdTech SaaS platform</h3>
+                        <p class="project-power-line">Built a scalable multi-tenant EdTech SaaS platform with advanced micro-level performance tracking, hybrid-ready assessment (online tests, live quizzes, key-paper review), and role-based dashboards for students, institutes, and administrators.</p>
+                        <p>End-to-end ecosystem for Indian government job aspirants (SSC, UPSC, Banking, Railway, State PSC): study paths, topic- and subject-level tests, daily current affairs, collaborative study rooms, and institute-grade analytics—aligned with the full product codebase on my machine.</p>
                         <div class="project-tech">
-                            <span>React</span>
+                            <span>React (Web)</span>
+                            <span>React Native · Expo</span>
                             <span>Node.js</span>
+                            <span>Express</span>
                             <span>MongoDB</span>
-                            <span>Express.js</span>
+                            <span>Firebase</span>
+                            <span>Socket.io</span>
+                            <span>Multi-tenant SaaS</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-eye"></i> Preview</a>
+                            <a href="#aspirants-way" class="project-link"><i class="fas fa-layer-group"></i> Platform deep-dive</a>
                         </div>
                     </div>
                 </div>
@@ -527,6 +532,157 @@
                             <a href="#" class="project-link"><i class="fas fa-clock"></i> Coming Soon</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aspirants Way — flagship product story (aligned with Desktop codebase) -->
+    <section id="aspirants-way" class="aspirants-way-flagship">
+        <div class="container">
+            <h2 class="section-title">Aspirants Way — Product, system &amp; business</h2>
+            <p class="flagship-lead">Built a scalable multi-tenant EdTech SaaS platform with advanced micro-level performance tracking, hybrid-ready assessment infrastructure (online tests, live quizzes, structured key-paper review), and role-based control planes for students, institutes, and administrators.</p>
+
+            <div class="eco-block arch-block">
+                <h3><i class="fas fa-sitemap"></i> System architecture</h3>
+                <p>Aspirants Way follows a <strong>multi-tenant SaaS</strong> model: <strong>role-based access</strong>, centralized content and test data, and <strong>institute-scoped</strong> delivery where cohorts only see assigned material and attempts are attributable to the right tenant.</p>
+                <ul class="eco-list arch-components">
+                    <li><strong>Mobile app</strong> — React Native (Expo), iOS &amp; Android: auth, onboarding &amp; job goals, home &amp; daily tasks, study (subjects → topics), tests, current affairs, study rooms (real-time messaging), profile &amp; performance.</li>
+                    <li><strong>Candidate web</strong> — React SPA: same core journeys in the browser for accessibility and desktop use.</li>
+                    <li><strong>Admin dashboard</strong> — operations &amp; content: question bank, live quiz control, user &amp; analytics surfaces, security-oriented admin flows.</li>
+                    <li><strong>Institute layer</strong> — dedicated APIs and headers (e.g. institute context) so batches get assigned tests and analytics without mixing global retail traffic.</li>
+                    <li><strong>Backend</strong> — Node.js / Express REST API, MongoDB for transactional and analytics-shaped data, optional queue-backed evaluation for scale, Firebase services where integrated (e.g. admin/auth paths).</li>
+                    <li><strong>Cloud &amp; ops</strong> — designed for managed SSL, auto-scaling (e.g. Cloud Run), Redis-backed rate limiting, and secrets via platform secret stores—documented in the project’s deployment guides.</li>
+                </ul>
+                <pre class="arch-diagram" aria-label="Architecture diagram">┌────────────────────┐   ┌─────────────────────┐
+│  Mobile (Expo RN)  │   │  Candidate web      │
+│  iOS · Android     │   │  (React)            │
+└─────────┬──────────┘   └──────────┬──────────┘
+          │                           │
+          └─────────────┬─────────────┘
+                        ▼
+              ┌─────────────────────┐
+              │  API (Node/Express) │
+              │  MongoDB · jobs/    │
+              │  queues (evaluation)│
+              └─────────┬───────────┘
+                        │
+        ┌───────────────┼───────────────┐
+        ▼               ▼               ▼
+ ┌────────────┐  ┌────────────┐  ┌──────────────┐
+ │ Super admin│  │ Manager /  │  │ Institute    │
+ │ + content  │  │ operations │  │ batches &    │
+ │ analytics  │  │ controls   │  │ scoped tests │
+ └────────────┘  └────────────┘  └──────────────┘</pre>
+            </div>
+
+            <div class="eco-two-col">
+                <div class="eco-block">
+                    <h3><i class="fas fa-microscope"></i> Micro-level performance &amp; intelligence</h3>
+                    <p><strong>Granular tracking</strong> (implemented in the backend and surfaced to candidates and admins):</p>
+                    <ul class="eco-list">
+                        <li><strong>Subject, topic, and job-goal dimensions</strong> — every completed attempt updates aggregated scores and history.</li>
+                        <li><strong>Question-level outcomes</strong> — per-question correctness, explanations, and review (“key paper”) from stored attempt payloads.</li>
+                        <li><strong>Time in seconds</strong> — <code>timeSpent</code> on attempts feeds accuracy vs speed narratives and daily progress.</li>
+                        <li><strong>Weak vs strong areas &amp; trends</strong> — overall vs <em>recent</em> accuracy (e.g. last N attempts), trend flags (improving / stable / declining) so old data does not hide real progress.</li>
+                    </ul>
+                    <p><strong>Smart suggestion engine (rule-based, no generative AI required)</strong> — analysis and guidance APIs derive recommendations from attempt history: what to revise next, which topics lag, and how consistency and job-specific performance look over time.</p>
+                    <p><strong>Daily current affairs</strong> — dated and categorized content in the app, suitable to tie into quizzes and tests (including difficulty-aware question flows in the content pipeline).</p>
+                </div>
+                <div class="eco-block">
+                    <h3><i class="fas fa-th-large"></i> Multi-level dashboard architecture</h3>
+                    <ul class="eco-list">
+                        <li><strong>Super admin</strong> — platform-wide control: users, institutes, content, tests, live quiz lifecycle, and cross-tenant analytics.</li>
+                        <li><strong>Manager / operations</strong> — day-to-day moderation, monitoring, and controlled operational tooling (e.g. manager control surfaces in the admin app).</li>
+                        <li><strong>Institute dashboard</strong> — own students and batches, assign tests, and view performance with the same micro-analytics primitives (scoped by institute).</li>
+                        <li><strong>Student experience</strong> — personalized home, job-filtered content, daily plans, tests, current affairs, rooms, and personal analytics.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="eco-block">
+                <h3><i class="fas fa-stream"></i> End-to-end workflow</h3>
+                <ol class="workflow-steps">
+                    <li>User registers and verifies identity (email/OTP flows).</li>
+                    <li>Selects <strong>job goals</strong> during onboarding — content and tests map to those blueprints.</li>
+                    <li>Receives <strong>filtered study paths</strong> and materials (subjects → topics).</li>
+                    <li>Takes <strong>topic-, subject-, or full mock</strong> tests; optional <strong>live quiz</strong> cohort flows with evaluate-and-rank.</li>
+                    <li>System records <strong>micro-performance</strong> and updates aggregates after each submit.</li>
+                    <li><strong>Rule-based guidance</strong> suggests what to study next and highlights weak areas.</li>
+                    <li><strong>Admin / institute</strong> monitors cohorts, attempts, and outcomes through dashboards and reports.</li>
+                </ol>
+            </div>
+
+            <div class="eco-block scenario-block">
+                <h3><i class="fas fa-book-reader"></i> Real-world scenario</h3>
+                <p>An <strong>SSC</strong> aspirant registers, selects SSC as a goal, and gets topic-aligned material and tests. After each attempt, the system tracks weak topics and recent accuracy; guidance nudges revision order. An enrolled <strong>institute</strong> assigns batch tests and watches batch-level progress while the student sees the same underlying analytics in a personal view—closing the loop between self-study and coached preparation.</p>
+            </div>
+
+            <div class="eco-two-col">
+                <div class="eco-block">
+                    <h3><i class="fas fa-shield-alt"></i> Security &amp; control</h3>
+                    <ul class="eco-list">
+                        <li><strong>Role-based access</strong> — separate candidate, institute, and admin capabilities.</li>
+                        <li><strong>Institute-level data isolation</strong> — institute context on APIs; tests and attempt histories can be scoped so tenants do not leak into each other.</li>
+                        <li><strong>Assessment integrity</strong> — server-side evaluation, structured attempt records, optional ordering metadata for fair keying, live quiz close → evaluate → ranked results.</li>
+                        <li><strong>Controlled visibility</strong> — content and test assignment driven by roles, jobs, and institute assignment—not a flat public dump.</li>
+                        <li><strong>Operational hardening</strong> — rate limiting (Redis-ready), JWT sessions, admin security patterns (including strong admin auth practices in the codebase), HTTPS and managed deployment targets.</li>
+                    </ul>
+                    <p class="eco-note"><em>Hybrid extensions:</em> the architecture supports adding barcode/OMR-style check-in or paper capture workflows as a layer on top of the same attempt and scoring model; the live product today centers on digital tests and key-paper review.</p>
+                </div>
+                <div class="eco-block">
+                    <h3><i class="fas fa-chart-bar"></i> Analytics &amp; reports (enterprise-style)</h3>
+                    <ul class="eco-list">
+                        <li>Performance dashboards for candidates and admin/institute views.</li>
+                        <li><strong>Time analysis</strong> — time spent per attempt and daily progress signals.</li>
+                        <li><strong>Accuracy trends</strong> — overall vs recent, plus trend direction.</li>
+                        <li><strong>Batch / cohort comparison</strong> — institute-scoped analytics and admin aggregations over users and attempts.</li>
+                        <li>Live quiz: post-eval <strong>leaderboards</strong>, ranks, and accuracy summaries.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="eco-block my-role-block">
+                <h3><i class="fas fa-user-tie"></i> My role</h3>
+                <ul class="eco-list my-role-list">
+                    <li>Designed the <strong>end-to-end system architecture</strong> (multi-tenant SaaS, roles, institute scoping, API boundaries).</li>
+                    <li>Built the <strong>mobile app</strong> with React Native and Expo (iOS &amp; Android).</li>
+                    <li>Implemented the <strong>candidate web application</strong> and aligned it with the same APIs.</li>
+                    <li>Delivered <strong>admin and manager-facing dashboards</strong> for content, quizzes, users, and operations.</li>
+                    <li>Created the <strong>test engine and evaluation pipeline</strong> (attempt lifecycle, scoring, performance aggregation, queue-friendly evaluation).</li>
+                    <li>Implemented <strong>live quiz</strong> flows: attempts, admin evaluate, scoring, ranking, key-paper style review.</li>
+                    <li>Implemented <strong>tracking and rule-based suggestion / guidance</strong> from real attempt data (no dependency on generative AI for core guidance).</li>
+                    <li>Owned <strong>institute APIs</strong> and billing-related integration points where applicable.</li>
+                </ul>
+            </div>
+
+            <div class="eco-block">
+                <h3><i class="fas fa-camera"></i> Screenshots &amp; demo</h3>
+                <p class="screenshot-hint">Drop exports into your site root (or an <code>/assets/aspirants-way/</code> folder) and replace the placeholders below—recruiters engage 10× faster with visuals.</p>
+                <div class="screenshot-grid">
+                    <div class="screenshot-placeholder"><span>Mobile — Home / daily plan</span><small>aspirants-way-mobile-home.png</small></div>
+                    <div class="screenshot-placeholder"><span>Mobile — Take test</span><small>aspirants-way-mobile-test.png</small></div>
+                    <div class="screenshot-placeholder"><span>Admin — Dashboard / analytics</span><small>aspirants-way-admin-dash.png</small></div>
+                    <div class="screenshot-placeholder"><span>Admin — Question bank / live quiz</span><small>aspirants-way-admin-content.png</small></div>
+                </div>
+            </div>
+
+            <div class="eco-two-col biz-row">
+                <div class="eco-block biz-block">
+                    <h3><i class="fas fa-hand-holding-usd"></i> Business model</h3>
+                    <ul class="eco-list">
+                        <li><strong>B2C</strong> — individual aspirants (subscriptions or freemium paths).</li>
+                        <li><strong>B2B</strong> — coaching institutes and batches (seat-based or packaged access).</li>
+                        <li><strong>Future SaaS scale</strong> — add tenants, exam verticals, and geographies without rewriting core attempt and analytics primitives.</li>
+                    </ul>
+                </div>
+                <div class="eco-block biz-block">
+                    <h3><i class="fas fa-globe"></i> Scalability</h3>
+                    <ul class="eco-list">
+                        <li><strong>Multi-institute</strong> — first-class institute entities and scoped tests.</li>
+                        <li><strong>Cloud-native API</strong> — horizontal scale, Redis-ready limits, async evaluation.</li>
+                        <li><strong>Expandable</strong> — same blueprint can extend to more exams, languages, and countries.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -728,7 +884,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Jagapathi Nayak Banoth. All rights reserved.</p>
+            <p>&copy; 2026 Jagapathi Nayak Banoth. All rights reserved.</p>
         </div>
     </footer>
 
