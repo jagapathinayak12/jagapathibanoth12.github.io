@@ -299,27 +299,30 @@
         .description {
             font-size: 10px;
             margin-bottom: 5px;
-            text-align: justify;
-            line-height: 1.4;
+            text-align: left;
+            line-height: 1.45;
         }
         
         .highlights {
             list-style: none;
             padding-left: 0;
+            margin: 0;
         }
         
         .highlights li {
             font-size: 9px;
-            margin-bottom: 2px;
-            padding-left: 12px;
+            margin-bottom: 3px;
+            padding-left: 14px;
             position: relative;
-            line-height: 1.4;
+            line-height: 1.45;
+            text-align: left;
+            overflow-wrap: break-word;
         }
         
         .highlights li::before {
             content: "•";
             position: absolute;
-            left: 0;
+            left: 2px;
             color: #333;
             font-weight: bold;
         }
@@ -353,8 +356,8 @@
         .education-item .description {
             font-size: 9px;
             margin-bottom: 0;
-            text-align: justify;
-            line-height: 1.4;
+            text-align: left;
+            line-height: 1.45;
         }
         
         /* Skills */
@@ -391,8 +394,8 @@
         .project-description {
             font-size: 9px;
             margin-bottom: 4px;
-            text-align: justify;
-            line-height: 1.4;
+            text-align: left;
+            line-height: 1.45;
         }
         
         .project-tech {
@@ -416,18 +419,31 @@
         /* Achievements */
         .achievement-item {
             font-size: 10px;
-            margin-bottom: 4px;
-            padding-left: 12px;
+            margin-bottom: 3px;
+            padding-left: 14px;
             position: relative;
-            line-height: 1.4;
+            line-height: 1.45;
+            text-align: left;
+            overflow-wrap: break-word;
         }
         
         .achievement-item::before {
             content: "•";
             position: absolute;
-            left: 0;
+            left: 2px;
             color: #333;
             font-weight: bold;
+        }
+
+        .cert-list {
+            font-size: 10px;
+            line-height: 1.45;
+            color: #555;
+        }
+
+        .cert-line {
+            margin-bottom: 3px;
+            text-align: left;
         }
 
         .achievement-subhead {
@@ -534,6 +550,14 @@
 
             .section .achievement-subsection:first-of-type .achievement-subhead {
                 margin-top: 0;
+            }
+
+            .cert-list {
+                font-size: 8px;
+            }
+
+            .cert-line {
+                margin-bottom: 2px;
             }
             
             /* Ensure first section starts properly */
@@ -758,16 +782,7 @@
                             <div class="date">September 2024 – Present</div>
                         </div>
                         <div class="company">Manchester, UK · Fulfilment (voluntary transfer DXM2 → MAN1, July 2025)</div>
-                        <div class="description">Individual contributor role within high-volume fulfilment operations. Shift-level pace, accuracy, handoffs, and safety across AU, BU, UTK. Supported team coordination and maintained on-floor standards during high-volume operations.</div>
-                        <ul class="highlights">
-                            <li>Delivered inbound/outbound flow against targets</li>
-                            <li>Maintained zero safety incidents across DXM2 and MAN1</li>
-                            <li>Exceeded productivity expectations during peak periods</li>
-                            <li>Cross-trained across stow, pick, pack, sort</li>
-                            <li>Fast ramp after DXM2 → MAN1 transfer</li>
-                            <li>Coordinated with multinational teams during peak</li>
-                            <li>Used performance data to improve workflow and pacing</li>
-                        </ul>
+                        <div class="description">Individual contributor in high-volume fulfilment operations. Managed pace, accuracy, handoffs, and safety across AU, BU, UTK while supporting team coordination during peak operations.</div>
                     </div>
                     
                     <div class="experience-item">
@@ -776,16 +791,7 @@
                             <div class="date">January 2024 – September 2024</div>
                         </div>
                         <div class="company">Double Zero Pizzeria, Manchester, UK</div>
-                        <div class="description">MBA placement with manager-level scope: day-to-end outcomes—staff, inventory, finance, service standards, compliance (under placement supervision).</div>
-                        <ul class="highlights">
-                            <li>Market research + vegan menu rollout → <strong>20% sales</strong> lift</li>
-                            <li><strong>POS optimisation</strong> → <strong>15% faster</strong> order processing; improved table turnover</li>
-                            <li>Customer feedback analysis (data visualisation) → actionable leadership insights</li>
-                            <li>Crisis leadership during high-volume operations—delegation, motivation, resource moves; protected service and safety</li>
-                            <li>Weekly inventory with local suppliers—negotiations, quality control, scheduling</li>
-                            <li>Daily alignment across kitchen, service, cleaning—rhythm and task balance</li>
-                            <li>Compliance; <strong>professional scepticism</strong> in finance (flagged and resolved budget discrepancies)</li>
-                        </ul>
+                        <div class="description">Delivered measurable improvements in sales, efficiency, and cost through operational and process changes. MBA placement with manager-level scope: day-to-end outcomes—staff, inventory, finance, service standards, compliance (under placement supervision).</div>
                     </div>
                 </div>
 
@@ -907,13 +913,17 @@
                         <div class="achievement-item">Exceeded productivity expectations during peak periods</div>
                         <div class="achievement-item">Cross-trained across stow, pick, pack, sort</div>
                         <div class="achievement-item">Fast ramp after DXM2 → MAN1 transfer</div>
+                        <div class="achievement-item">Coordinated with multinational teams during peak</div>
+                        <div class="achievement-item">Used performance data to improve workflow and pacing</div>
                     </div>
                     <div class="achievement-subsection">
-                        <div class="achievement-subhead">GM placement impact</div>
+                        <div class="achievement-subhead">GM Placement Impact</div>
                         <div class="achievement-item">Increased sales by 20% through menu innovation</div>
                         <div class="achievement-item">Reduced processing time by 15% via POS optimisation</div>
                         <div class="achievement-item">Improved cost efficiency by 15%</div>
                         <div class="achievement-item">Managed £20k+ supplier contracts</div>
+                        <div class="achievement-item">Led operations during peak periods ensuring service and safety</div>
+                        <div class="achievement-item">Built customer feedback analysis dashboards for decisions</div>
                     </div>
                 </div>
 
@@ -921,22 +931,23 @@
                 <div class="section">
                     <h2 class="section-title">Professional strengths</h2>
                     <div class="skills-list">
-                        • Operational analysis, KPIs, and structured problem-solving<br>
-                        • Calm execution under peak volume; safety and standards<br>
-                        • Cross-functional coordination (floor, kitchen/service, suppliers)<br>
-                        • Data-informed decisions; practical tools when they reduce friction<br>
-                        • Cross-cultural communication (UK, EU, international teams)
+                        • Strong operational analysis and KPI-driven decision-making<br>
+                        • Calm execution under peak volume and pressure<br>
+                        • Cross-functional coordination across diverse teams<br>
+                        • Data-informed problem solving and process improvement
                     </div>
                 </div>
 
                 <!-- Certifications & Training -->
                 <div class="section">
-                    <h2 class="section-title">Training & Certifications</h2>
-                    <div class="achievement-item">Amazon Warehouse Operations Training</div>
-                    <div class="achievement-item">UK Food Safety & Hygiene Compliance</div>
-                    <div class="achievement-item">UCLan Professional Placement Assessment</div>
-                    <div class="achievement-item">Computerized Accounting (Tally)</div>
-                    <div class="achievement-item">Cross-departmental Operations Training</div>
+                    <h2 class="section-title">Training &amp; Certifications</h2>
+                    <div class="cert-list">
+                        <div class="cert-line">Amazon Warehouse Operations Training</div>
+                        <div class="cert-line">UK Food Safety &amp; Hygiene Compliance</div>
+                        <div class="cert-line">UCLan Professional Placement Assessment</div>
+                        <div class="cert-line">Computerized Accounting (Tally)</div>
+                        <div class="cert-line">Cross-departmental Operations Training</div>
+                    </div>
                 </div>
             </div>
         </div>
