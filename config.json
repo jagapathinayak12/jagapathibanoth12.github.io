@@ -1,8 +1,8 @@
 {
   "personalInfo": {
     "name": "Jagapathi Nayak Banoth",
-    "title": "MBA | Operations | Amazon MAN1 (DXM2 → MAN1) — Area Manager–path",
-    "tagline": "Manchester. Amazon MAN1 (DXM2 → MAN1) + MBA GM placement. Ownership, safety, measurable results; targeting operations leadership. Practical tools where they improve decisions.",
+    "title": "MBA | Operations | Amazon MAN1 (DXM2 → MAN1)",
+    "tagline": "Manchester. Amazon MAN1 (DXM2 → MAN1) + MBA GM placement. Ownership, safety, measurable results. Practical tools where they improve decisions.",
     "email": "contact@jagapathinayakbanoth.info",
     "phone": "+44 7867 035864",
     "location": "Manchester, United Kingdom",
@@ -17,20 +17,20 @@
   "about": {
     "description": [
       "MBA (UCLan). Amazon fulfilment MAN1; MBA GM placement in hospitality, Manchester.",
-      "Page order: About → Experience → Impact (includes separate student vs institute delivery cards) → Skills → Selected projects (Agricultural + two Aspirants cards) → Aspirants Way detail → Education.",
+      "Page order: About → Experience → Impact → Skills → Selected projects (Agricultural, MineNewHouse Bill, Aspirants Way) → Aspirants Way detail → Education.",
       "Uses data, reporting, and practical tools when they improve operations and decisions."
     ],
     "stats": {
       "ukProfessionalYears": "2+",
-      "projects": "3",
+      "projects": "4",
       "compliance": "100%",
       "safetyIncidents": "Zero"
     }
   },
   "skills": {
-    "frontend": ["HTML5", "CSS3", "JavaScript", "React", "React Native", "Expo"],
-    "backend": ["Node.js", "Express.js", "MongoDB", "REST APIs", "Socket.io"],
-    "platform": ["Firebase", "Git", "GitHub Pages", "Cloud deployment patterns", "EmailJS"]
+    "frontend": ["HTML5", "CSS3", "JavaScript", "React", "React Native", "Expo", "Next.js", "TypeScript", "Tailwind CSS"],
+    "backend": ["Node.js", "Express.js", "MongoDB", "REST APIs", "Socket.io", "Cloud Functions"],
+    "platform": ["Firebase", "Git", "GitHub Pages", "Cloud deployment patterns", "EmailJS", "PWA"]
   },
   "projects": [
     {
@@ -39,6 +39,13 @@
       "technologies": ["React Native", "Expo", "JavaScript"],
       "status": "completed",
       "github": "https://github.com/jagapathinayak12"
+    },
+    {
+      "title": "MineNewHouse Bill — shared house expenses",
+      "description": "Live PWA for housemates: bills, splits, live balances, billing periods, reports, PDF export.",
+      "technologies": ["Next.js", "React", "TypeScript", "Firebase", "Firestore", "Cloud Functions", "Tailwind CSS"],
+      "status": "live",
+      "liveLink": "https://house-bills-project.web.app"
     },
     {
       "title": "Aspirants Way — Student platform",

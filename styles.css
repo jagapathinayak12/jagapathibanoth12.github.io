@@ -858,6 +858,20 @@ section:first-of-type {
     margin-left: 0.5rem;
 }
 
+.project-impact.house-app {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.status-badge-live {
+    background: linear-gradient(135deg, #059669, #10b981) !important;
+    animation: none;
+}
+
+.project-card-house {
+    border-color: rgba(5, 150, 105, 0.35);
+    box-shadow: 0 8px 30px rgba(5, 150, 105, 0.12);
+}
+
 /* Education Section */
 .education {
     padding: 80px 0; /* Reduced from 100px */
@@ -1671,15 +1685,24 @@ section:first-of-type {
     direction: ltr;
 }
 
-/* Enhanced animation support */
-* {
-    /* Enable hardware acceleration for smoother animations */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+/* Mobile: never hide sections (scroll animation script can leave opacity:0 on iOS Safari) */
+@media (max-width: 768px) {
+    section,
+    .skill-category,
+    .project-card {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* GPU hints on animated elements only — avoid global transform on * (breaks IntersectionObserver on mobile) */
+.profile-img,
+.project-card,
+.skill-category,
+.achievement-card,
+.behavioral-card {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    perspective: 1000;
 }
 
 /* Improve will-change for animated elements - apply only on hover */

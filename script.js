@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('EmailJS initialized for direct email delivery');
     }
     
-    // Initialize scroll animations immediately (no loading screen)
+    // Initialize scroll animations (desktop only — mobile Safari often never fires IntersectionObserver on hidden sections)
     setTimeout(() => {
         triggerScrollAnimations();
     }, 100);
@@ -48,34 +48,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize scroll animations
     function triggerScrollAnimations() {
-        // Scroll animations
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
+        const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+        // Mobile/touch: keep all content visible (opacity:0 on sections caused blank pages on phones)
+        if (prefersReducedMotion || isMobileViewport || isTouchDevice) {
+            document.querySelectorAll('section, .skill-category, .project-card').forEach(element => {
+                element.style.opacity = '1';
+                element.style.transform = 'none';
+            });
+            return;
+        }
+
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.05,
+            rootMargin: '0px 0px 0px 0px'
+        };
+
+        const revealElement = (element) => {
+            element.classList.add('animate');
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    revealElement(entry.target);
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe all sections and animatable elements (skip flagship: must stay visible on file:// if observer misbehaves)
         document.querySelectorAll('section, .skill-category, .project-card').forEach(element => {
             if (element.id === 'aspirants-way' || element.classList.contains('aspirants-way-flagship')) {
                 return;
             }
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
-            element.style.transition = 'all 0.6s ease-out';
+            element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
             observer.observe(element);
+
+            // Already in viewport on load
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                revealElement(element);
+                observer.unobserve(element);
+            }
         });
+
+        // Fallback if observer misses elements (e.g. iOS quirks)
+        const revealVisibleOnScroll = () => {
+            document.querySelectorAll('section, .skill-category, .project-card').forEach(element => {
+                if (element.style.opacity === '0') {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < window.innerHeight * 0.95 && rect.bottom > 0) {
+                        revealElement(element);
+                    }
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealVisibleOnScroll, { passive: true });
+        window.addEventListener('resize', revealVisibleOnScroll, { passive: true });
+        setTimeout(revealVisibleOnScroll, 500);
         
-        // Trigger initial animations for visible elements
         setTimeout(() => {
             const heroSection = document.querySelector('.hero');
             if (heroSection) {
